@@ -524,19 +524,19 @@
   <ItemGroup>
     <Reference Include="AMapSDKV2Comp, Version=255.255.255.255, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\AMap3D.WindowsPhone.2.3.0\lib\AMapSDKV2Comp.winmd</HintPath>
+      <HintPath>..\AMAP3DEngine\references\arm\debug\AMapSDKV2Comp.winmd</HintPath>
     </Reference>
-    <Reference Include="Com.AMap.Api.Maps, Version=2.2.0.0, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="Com.AMap.Api.Maps, Version=2.2.1.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\AMap3D.WindowsPhone.2.3.0\lib\Com.AMap.Api.Maps.dll</HintPath>
+      <HintPath>..\AMAP3DEngine\references\arm\debug\Com.AMap.Api.Maps.dll</HintPath>
     </Reference>
-    <Reference Include="Com.AMap.Api.Services, Version=2.2.0.0, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="Com.AMap.Api.Services, Version=2.2.1.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\AMap3D.WindowsPhone.2.3.0\lib\Com.AMap.Api.Services.dll</HintPath>
+      <HintPath>..\AMAP3DEngine\references\arm\debug\Com.AMap.Api.Services.dll</HintPath>
     </Reference>
     <Reference Include="Google.ProtocolBuffers, Version=2.1.2.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\AMap3D.WindowsPhone.2.3.0\lib\Google.ProtocolBuffers.dll</HintPath>
+      <HintPath>..\AMAP3DEngine\references\arm\debug\Google.ProtocolBuffers.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Phone.Controls.Toolkit">
       <HintPath>..\packages\WPtoolkit.4.2013.08.16\lib\wp8\Microsoft.Phone.Controls.Toolkit.dll</HintPath>
@@ -557,34 +557,6 @@
   <ProjectExtensions />
   <PropertyGroup>
     <PreBuildEvent>
-IF $(ConfigurationName) == Debug IF $(PlatformName) == ARM goto DebugARM
-IF $(ConfigurationName) == Debug IF $(PlatformName) == x86 goto Debugx86
-IF $(ConfigurationName) == Release IF $(PlatformName) == ARM goto ReleaseARM
-IF $(ConfigurationName) == Release IF $(PlatformName) == x86 goto Releasex86
-
-:DebugARM
-echo build SDK-DebugARM
-copy "E:\Code\AmapWpSLDemo\packages\AMap3D.WindowsPhone.2.3.0\AMAP3DEngine\lib\arm\debug\LibMap.dll" "$(ProjectDir)\LibMap.dll" /Y
-copy "E:\Code\AmapWpSLDemo\packages\AMap3D.WindowsPhone.2.3.0\AMAP3DEngine\references\arm\debug\AMapSDKV2Comp.dll" "E:\Code\AmapWpSLDemo\packages\AMap3D.WindowsPhone.2.3.0\lib\AMapSDKV2Comp.dll" /Y
-exit 0
-
-:Debugx86
-echo build SDK-Debugx86
-copy "E:\Code\AmapWpSLDemo\packages\AMap3D.WindowsPhone.2.3.0\AMAP3DEngine\lib\x86\debug\LibMap.dll" "$(ProjectDir)\LibMap.dll" /Y
-copy "E:\Code\AmapWpSLDemo\packages\AMap3D.WindowsPhone.2.3.0\AMAP3DEngine\references\x86\debug\AMapSDKV2Comp.dll" "E:\Code\AmapWpSLDemo\packages\AMap3D.WindowsPhone.2.3.0\lib\AMapSDKV2Comp.dll" /Y
-exit 0
-
-:ReleaseARM
-echo build SDK-ReleaseARM
-copy "E:\Code\AmapWpSLDemo\packages\AMap3D.WindowsPhone.2.3.0\AMAP3DEngine\lib\arm\release\LibMap.dll" "$(ProjectDir)\LibMap.dll" /Y
-copy "E:\Code\AmapWpSLDemo\packages\AMap3D.WindowsPhone.2.3.0\AMAP3DEngine\references\arm\release\AMapSDKV2Comp.dll" "E:\Code\AmapWpSLDemo\packages\AMap3D.WindowsPhone.2.3.0\lib\AMapSDKV2Comp.dll" /Y
-exit 0
-
-:Releasex86
-echo build SDK-Releasex86
-copy "E:\Code\AmapWpSLDemo\packages\AMap3D.WindowsPhone.2.3.0\AMAP3DEngine\lib\x86\release\LibMap.dll" "$(ProjectDir)\LibMap.dll" /Y
-copy "E:\Code\AmapWpSLDemo\packages\AMap3D.WindowsPhone.2.3.0\AMAP3DEngine\references\x86\release\AMapSDKV2Comp.dll" "E:\Code\AmapWpSLDemo\packages\AMap3D.WindowsPhone.2.3.0\lib\AMapSDKV2Comp.dll" /Y
-exit 0
-</PreBuildEvent>
+    </PreBuildEvent>
   </PropertyGroup>
 </Project>
