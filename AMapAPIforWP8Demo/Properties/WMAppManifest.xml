@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Deployment xmlns="http://schemas.microsoft.com/windowsphone/2012/deployment" AppPlatformVersion="8.0">
   <DefaultLanguage xmlns="" code="zh-CN" />
-  <App xmlns="" ProductID="{9957599b-32bf-41d1-bdfb-7a05d5209786}" Title="高德地图API示例2.2.0" RuntimeType="Silverlight" Version="1.0.0.0813" Genre="apps.normal" Author="lingxiang.wang" Description="高德地图API示例2.2.0" Publisher="lingxiang.wang" PublisherID="{a26ca244-0ce2-4b05-8b50-3f0a92452c67}">
+  <App xmlns="" ProductID="{9957599b-32bf-41d1-bdfb-7a05d5209786}" Title="高德地图API示例2.2.1" RuntimeType="Silverlight" Version="1.0.0.0919" Genre="apps.normal" Author="lingxiang.wang" Description="高德地图API示例2.2.1" Publisher="lingxiang.wang" PublisherID="{a26ca244-0ce2-4b05-8b50-3f0a92452c67}">
     <IconPath IsRelative="true" IsResource="false">Assets\ApplicationIcon.png</IconPath>
     <Capabilities>
       <Capability Name="ID_CAP_NETWORKING" />
