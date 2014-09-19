@@ -63,7 +63,7 @@ namespace AMap_WP8_Api_Demos_v2._2.Samples
             AInfoWindow info = new AInfoWindow();
             info.Title = "这是自定义信息窗口";
             info.ContentText = msg;
-            marker.ShowInfoWindow(info, new Point(0, 0));
+            marker.ShowInfoWindow(info);
     
 
         }
