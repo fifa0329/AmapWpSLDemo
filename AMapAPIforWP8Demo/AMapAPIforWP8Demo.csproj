@@ -1,0 +1,590 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.20506</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{FE426A2A-D42A-4A66-A010-50684DDE17C5}</ProjectGuid>
+    <ProjectTypeGuids>{C089C8C0-30E0-4E22-80C0-CE093F111A43};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AMapAPIforWP8Demo</RootNamespace>
+    <AssemblyName>AMapAPIforWP8Demo</AssemblyName>
+    <TargetFrameworkIdentifier>WindowsPhone</TargetFrameworkIdentifier>
+    <TargetFrameworkVersion>v8.0</TargetFrameworkVersion>
+    <SilverlightVersion>$(TargetFrameworkVersion)</SilverlightVersion>
+    <SilverlightApplication>true</SilverlightApplication>
+    <SupportedCultures>
+    </SupportedCultures>
+    <XapOutputs>true</XapOutputs>
+    <GenerateSilverlightManifest>true</GenerateSilverlightManifest>
+    <XapFilename>AMapAPIforWP8Demo_$(Configuration)_$(Platform).xap</XapFilename>
+    <SilverlightManifestTemplate>Properties\AppManifest.xml</SilverlightManifestTemplate>
+    <SilverlightAppEntry>AMapAPIforWP8Demo.App</SilverlightAppEntry>
+    <ValidateXaml>true</ValidateXaml>
+    <MinimumVisualStudioVersion>11.0</MinimumVisualStudioVersion>
+    <ThrowErrorsInValidation>true</ThrowErrorsInValidation>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>Bin\Release</OutputPath>
+    <DefineConstants>TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Bin\x86\Debug</OutputPath>
+    <DefineConstants>DEBUG;TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>Bin\x86\Release</OutputPath>
+    <DefineConstants>TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|ARM' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Bin\ARM\Debug</OutputPath>
+    <DefineConstants>DEBUG;TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|ARM' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>Bin\ARM\Release</OutputPath>
+    <DefineConstants>TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="AInfoWindow.cs" />
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CheckBoxEx.cs" />
+    <Compile Include="LocalizedStrings.cs" />
+    <Compile Include="MainPage.xaml.cs">
+      <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MemoryDiagnostics.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resource1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resource1.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\AppResources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AppResources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Samples\MapDemo\AddOverlays.xaml.cs">
+      <DependentUpon>AddOverlays.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Samples\MapDemo\Animate.xaml.cs">
+      <DependentUpon>Animate.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Samples\MapDemo\CameralIntroduce.xaml.cs">
+      <DependentUpon>CameralIntroduce.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Samples\MapDemo\CustomerInfoWindow.xaml.cs">
+      <DependentUpon>CustomerInfoWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Samples\MapDemo\DisplayMap.xaml.cs">
+      <DependentUpon>DisplayMap.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Samples\MapDemo\Gestures6.xaml.cs">
+      <DependentUpon>Gestures6.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Samples\MapDemo\Gestures4.xaml.cs">
+      <DependentUpon>Gestures4.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Samples\MapDemo\Gestures1.xaml.cs">
+      <DependentUpon>Gestures1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Samples\MapDemo\Gestures2.xaml.cs">
+      <DependentUpon>Gestures2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Samples\MapDemo\Gestures3.xaml.cs">
+      <DependentUpon>Gestures3.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Samples\MapDemo\Gestures5.xaml.cs">
+      <DependentUpon>Gestures5.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Samples\MapDemo\Gestures7.xaml.cs">
+      <DependentUpon>Gestures7.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Samples\MapDemo\GroundOverly.xaml.cs">
+      <DependentUpon>GroundOverly.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Samples\MapDemo\MapCalculatePage.xaml.cs">
+      <DependentUpon>MapCalculatePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Samples\MapDemo\MapCirclePage.xaml.cs">
+      <DependentUpon>MapCirclePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Samples\MapDemo\MapEventsPage.xaml.cs">
+      <DependentUpon>MapEventsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Samples\MapDemo\MapGeodesic.xaml.cs">
+      <DependentUpon>MapGeodesic.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Samples\MapDemo\MapLayerPage.xaml.cs">
+      <DependentUpon>MapLayerPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Samples\MapDemo\MapMarkerPage.xaml.cs">
+      <DependentUpon>MapMarkerPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Samples\MapDemo\MapPolygonPage.xaml.cs">
+      <DependentUpon>MapPolygonPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Samples\MapDemo\MapPolylinePage.xaml.cs">
+      <DependentUpon>MapPolylinePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Samples\MapDemo\MapType.xaml.cs">
+      <DependentUpon>MapType.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Samples\MapDemo\MarkerDragPage.xaml.cs">
+      <DependentUpon>MarkerDragPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Samples\MapDemo\MyLocation.xaml.cs">
+      <DependentUpon>MyLocation.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Samples\MapDemo\Overlay.xaml.cs">
+      <DependentUpon>Overlay.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Samples\MapDemo\Screen.xaml.cs">
+      <DependentUpon>Screen.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Samples\MapDemo\ShowBuilding.xaml.cs">
+      <DependentUpon>ShowBuilding.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Samples\MapDemo\Traffic.xaml.cs">
+      <DependentUpon>Traffic.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Samples\MapDemo\ZIndexPage.xaml.cs">
+      <DependentUpon>ZIndexPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Samples\SearchDemo\AMapInputWordTips.xaml.cs">
+      <DependentUpon>AMapInputWordTips.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Samples\SearchDemo\BusIntegratedNavigation.xaml.cs">
+      <DependentUpon>BusIntegratedNavigation.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Samples\SearchDemo\BusLineIDSearch.xaml.cs">
+      <DependentUpon>BusLineIDSearch.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Samples\SearchDemo\BusSearchofLine.xaml.cs">
+      <DependentUpon>BusSearchofLine.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Samples\SearchDemo\BusStopKeyWords.xaml.cs">
+      <DependentUpon>BusStopKeyWords.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Samples\SearchDemo\CarDrivingNavigation.xaml.cs">
+      <DependentUpon>CarDrivingNavigation.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Samples\SearchDemo\NavigationPage.xaml.cs">
+      <DependentUpon>NavigationPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Samples\SearchDemo\POIAround.xaml.cs">
+      <DependentUpon>POIAround.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Samples\SearchDemo\POIIDSearch.xaml.cs">
+      <DependentUpon>POIIDSearch.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Samples\SearchDemo\POIkeywordSearch.xaml.cs">
+      <DependentUpon>POIkeywordSearch.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Samples\SearchDemo\POIPolygonSearch.xaml.cs">
+      <DependentUpon>POIPolygonSearch.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Samples\SearchDemo\SearchGeoCode.xaml.cs">
+      <DependentUpon>SearchGeoCode.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Samples\SearchDemo\SearchReGeoCode.xaml.cs">
+      <DependentUpon>SearchReGeoCode.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Samples\SearchDemo\WalkingNavigation.xaml.cs">
+      <DependentUpon>WalkingNavigation.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </ApplicationDefinition>
+    <Page Include="MainPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Samples\MapDemo\AddOverlays.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Samples\MapDemo\Animate.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Samples\MapDemo\CameralIntroduce.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Samples\MapDemo\CustomerInfoWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Samples\MapDemo\DisplayMap.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Samples\MapDemo\Gestures6.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Samples\MapDemo\Gestures4.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Samples\MapDemo\Gestures1.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Samples\MapDemo\Gestures2.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Samples\MapDemo\Gestures3.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Samples\MapDemo\Gestures5.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Samples\MapDemo\Gestures7.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Samples\MapDemo\GroundOverly.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Samples\MapDemo\MapCalculatePage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Samples\MapDemo\MapCirclePage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Samples\MapDemo\MapEventsPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Samples\MapDemo\MapGeodesic.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Samples\MapDemo\MapLayerPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Samples\MapDemo\MapMarkerPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Samples\MapDemo\MapPolygonPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Samples\MapDemo\MapPolylinePage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Samples\MapDemo\MapType.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Samples\MapDemo\MarkerDragPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Samples\MapDemo\MyLocation.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Samples\MapDemo\Overlay.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Samples\MapDemo\Screen.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Samples\MapDemo\ShowBuilding.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Samples\MapDemo\Traffic.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Samples\MapDemo\ZIndexPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Samples\SearchDemo\AMapInputWordTips.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Samples\SearchDemo\BusIntegratedNavigation.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Samples\SearchDemo\BusLineIDSearch.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Samples\SearchDemo\BusSearchofLine.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Samples\SearchDemo\BusStopKeyWords.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Samples\SearchDemo\CarDrivingNavigation.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Samples\SearchDemo\NavigationPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Samples\SearchDemo\POIAround.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Samples\SearchDemo\POIIDSearch.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Samples\SearchDemo\POIkeywordSearch.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Samples\SearchDemo\POIPolygonSearch.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Samples\SearchDemo\SearchGeoCode.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Samples\SearchDemo\SearchReGeoCode.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Samples\SearchDemo\WalkingNavigation.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Assets\AppBar\favs.png" />
+    <Content Include="Assets\AppBar\feature.search.png" />
+    <Content Include="Assets\AppBar\info.png" />
+    <Content Include="Assets\AppBar\location.png" />
+    <Content Include="Assets\bktile.data" />
+    <Content Include="Assets\DrawLinePixelShader.cso" />
+    <Content Include="Assets\DrawLineVertexShader.cso" />
+    <Content Include="Assets\DrawPolygonPixelShader.cso" />
+    <Content Include="Assets\DrawPolygonVertexShader.cso" />
+    <Content Include="Assets\ft2.data" />
+    <Content Include="Assets\icn_hv3.data" />
+    <Content Include="Assets\icn_lv3.data" />
+    <Content Include="Assets\InsertPicturePixelShader.cso" />
+    <Content Include="Assets\InsertPictureVertexShader.cso" />
+    <Content Include="Assets\lr.data" />
+    <Content Include="Assets\lt.cso" />
+    <Content Include="Assets\ltc.cso" />
+    <Content Include="Assets\oc.cso" />
+    <Content Include="Assets\ov2.cso" />
+    <Content Include="Assets\ov3.cso" />
+    <Content Include="Assets\ra.data" />
+    <Content Include="Assets\rd.data" />
+    <Content Include="Assets\style_lv3.data" />
+    <Content Include="Assets\style_slv3.data" />
+    <Content Include="Assets\v3t.cso" />
+    <Content Include="Assets\vvt.cso" />
+    <Content Include="Assets\wk.data" />
+    <None Include="packages.config" />
+    <None Include="Properties\AppManifest.xml" />
+    <None Include="Properties\WMAppManifest.xml">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Assets\AlignmentGrid.png" />
+    <Content Include="Assets\ApplicationIcon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Tiles\FlipCycleTileLarge.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Tiles\FlipCycleTileMedium.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Tiles\FlipCycleTileSmall.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Tiles\IconicTileMediumLarge.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Tiles\IconicTileSmall.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\AZURE.png" />
+    <Content Include="Images\BLUE.png" />
+    <Content Include="Images\bus.png" />
+    <Content Include="Images\bus_end_pic.png" />
+    <Content Include="Images\bus_start_pic.png" />
+    <Content Include="Images\bx11.png" />
+    <Content Include="Images\car.png" />
+    <Content Include="Images\CYAN.png" />
+    <Content Include="Images\GREEN.png" />
+    <Content Include="Images\ListIcon.png" />
+    <Content Include="Images\location.png" />
+    <Content Include="Images\location_on.png" />
+    <Content Include="Images\MAGENTAV.png" />
+    <Content Include="Images\man.png" />
+    <Content Include="Images\marker_gps_no_sharing.png" />
+    <Content Include="Images\ORANGE.png" />
+    <Content Include="Images\RED.png" />
+    <Content Include="Images\ROSE.png" />
+    <Content Include="Images\test1.png" />
+    <Content Include="Images\VIOLET.png" />
+    <Content Include="Images\YELLOW.png" />
+    <Content Include="Images\2.png" />
+    <Content Include="LibMap.dll" />
+    <Content Include="NaviMap.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="NaviSearch.xml" />
+    <Content Include="README_FIRST.txt" />
+    <Content Include="Toolkit.Content\ApplicationBar.Add.png" />
+    <Content Include="Toolkit.Content\ApplicationBar.Cancel.png" />
+    <Content Include="Toolkit.Content\ApplicationBar.Check.png" />
+    <Content Include="Toolkit.Content\ApplicationBar.Delete.png" />
+    <Content Include="Toolkit.Content\ApplicationBar.Select.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resource1.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resource1.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\AppResources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>AppResources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="AMapSDKV2Comp, Version=255.255.255.255, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\AMap3D.WindowsPhone.2.3.0\lib\AMapSDKV2Comp.winmd</HintPath>
+    </Reference>
+    <Reference Include="Com.AMap.Api.Maps, Version=2.2.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\AMap3D.WindowsPhone.2.3.0\lib\Com.AMap.Api.Maps.dll</HintPath>
+    </Reference>
+    <Reference Include="Com.AMap.Api.Services, Version=2.2.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\AMap3D.WindowsPhone.2.3.0\lib\Com.AMap.Api.Services.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.ProtocolBuffers, Version=2.1.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\AMap3D.WindowsPhone.2.3.0\lib\Google.ProtocolBuffers.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Phone.Controls.Toolkit">
+      <HintPath>..\packages\WPtoolkit.4.2013.08.16\lib\wp8\Microsoft.Phone.Controls.Toolkit.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\$(TargetFrameworkIdentifier)\$(TargetFrameworkVersion)\Microsoft.$(TargetFrameworkIdentifier).$(TargetFrameworkVersion).Overrides.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\$(TargetFrameworkIdentifier)\$(TargetFrameworkVersion)\Microsoft.$(TargetFrameworkIdentifier).CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions />
+  <PropertyGroup>
+    <PreBuildEvent>
+IF $(ConfigurationName) == Debug IF $(PlatformName) == ARM goto DebugARM
+IF $(ConfigurationName) == Debug IF $(PlatformName) == x86 goto Debugx86
+IF $(ConfigurationName) == Release IF $(PlatformName) == ARM goto ReleaseARM
+IF $(ConfigurationName) == Release IF $(PlatformName) == x86 goto Releasex86
+
+:DebugARM
+echo build SDK-DebugARM
+copy "E:\Code\AmapWpSLDemo\packages\AMap3D.WindowsPhone.2.3.0\AMAP3DEngine\lib\arm\debug\LibMap.dll" "$(ProjectDir)\LibMap.dll" /Y
+copy "E:\Code\AmapWpSLDemo\packages\AMap3D.WindowsPhone.2.3.0\AMAP3DEngine\references\arm\debug\AMapSDKV2Comp.dll" "E:\Code\AmapWpSLDemo\packages\AMap3D.WindowsPhone.2.3.0\lib\AMapSDKV2Comp.dll" /Y
+exit 0
+
+:Debugx86
+echo build SDK-Debugx86
+copy "E:\Code\AmapWpSLDemo\packages\AMap3D.WindowsPhone.2.3.0\AMAP3DEngine\lib\x86\debug\LibMap.dll" "$(ProjectDir)\LibMap.dll" /Y
+copy "E:\Code\AmapWpSLDemo\packages\AMap3D.WindowsPhone.2.3.0\AMAP3DEngine\references\x86\debug\AMapSDKV2Comp.dll" "E:\Code\AmapWpSLDemo\packages\AMap3D.WindowsPhone.2.3.0\lib\AMapSDKV2Comp.dll" /Y
+exit 0
+
+:ReleaseARM
+echo build SDK-ReleaseARM
+copy "E:\Code\AmapWpSLDemo\packages\AMap3D.WindowsPhone.2.3.0\AMAP3DEngine\lib\arm\release\LibMap.dll" "$(ProjectDir)\LibMap.dll" /Y
+copy "E:\Code\AmapWpSLDemo\packages\AMap3D.WindowsPhone.2.3.0\AMAP3DEngine\references\arm\release\AMapSDKV2Comp.dll" "E:\Code\AmapWpSLDemo\packages\AMap3D.WindowsPhone.2.3.0\lib\AMapSDKV2Comp.dll" /Y
+exit 0
+
+:Releasex86
+echo build SDK-Releasex86
+copy "E:\Code\AmapWpSLDemo\packages\AMap3D.WindowsPhone.2.3.0\AMAP3DEngine\lib\x86\release\LibMap.dll" "$(ProjectDir)\LibMap.dll" /Y
+copy "E:\Code\AmapWpSLDemo\packages\AMap3D.WindowsPhone.2.3.0\AMAP3DEngine\references\x86\release\AMapSDKV2Comp.dll" "E:\Code\AmapWpSLDemo\packages\AMap3D.WindowsPhone.2.3.0\lib\AMapSDKV2Comp.dll" /Y
+exit 0
+</PreBuildEvent>
+  </PropertyGroup>
+</Project>

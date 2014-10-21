@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<root>
+  <node title="地图覆盖物" childTitle="覆盖物">
+    <node title="标注(MapMarkerPage)" address="/Samples/MapDemo/MapMarkerPage.xaml" />
+    <node title="折线(MapPolylinePage）" address="/Samples/MapDemo/MapPolylinePage.xaml" />
+    <node title="多边形(MapPolygonPage)" address="/Samples/MapDemo/MapPolygonPage.xaml" />
+    <node title="圆(MapCirclePage)" address="/Samples/MapDemo/MapCirclePage.xaml" />
+    <node title="添加覆盖物(AddOverlays)" address="/Samples/MapDemo/AddOverlays.xaml" />
+    <node title="图片覆盖物(GroundOverly)" address="/Samples/MapDemo/GroundOverly.xaml" />
+    <node title="图层(MapLayerPage)" address="/Samples/MapDemo/MapLayerPage.xaml" />
+    <node title="大地曲线(MapGeodesic)" address="/Samples/MapDemo/MapGeodesic.xaml" />
+    <node title="自定义窗体(CustomerInfoWindow)" address="/Samples/MapDemo/CustomerInfoWindow.xaml" />
+    <node title="点操作(MarkerDragPage)" address="/Samples/MapDemo/MarkerDragPage.xaml" />
+    <node title="点包含关系(Overlay)" address="/Samples/MapDemo/Overlay.xaml" />
+  </node>
+  <node title="地图图层" childTitle="图层切换">
+    <node title="地图类型(MapType)" address="/Samples/MapDemo/MapType.xaml" />
+    <node title="实时交通(Traffic)" address="/Samples/MapDemo/Traffic.xaml" />
+  </node>
+  <node title="手势控制" childTitle="手势">
+    <node title="移动手势(Gestures1)" address="/Samples/MapDemo/Gestures1.xaml" />
+    <node title="缩放手势(Gestures2)" address="/Samples/MapDemo/Gestures2.xaml" />
+    <node title="旋转手势(Gestures3)" address="/Samples/MapDemo/Gestures3.xaml" />
+    <node title="倾斜手势(Gestures4)" address="/Samples/MapDemo/Gestures4.xaml" />
+  </node>
+  <node title="地图控件" childTitle="地图控件" >
+    <node title="缩放控件(Gestures5)" address="/Samples/MapDemo/Gestures5.xaml" />
+    <node title="指南针(Gestures6)" address="/Samples/MapDemo/Gestures6.xaml" />
+    <node title="比例尺(Gestures7)" address="/Samples/MapDemo/Gestures7.xaml" />
+  </node>
+  <node title="可视区域操作" childTitle="可视区域">
+    <!--<node title="可视区域的位置" address="/Samples/MapDemo/AMapInputWordTips.xaml" />-->
+    <node title="移动动画(Animate)" address="/Samples/MapDemo/Animate.xaml" />
+    <node title="监听地图可视区域变化(CameralIntroduce)" address="/Samples/MapDemo/CameralIntroduce.xaml" />
+    <node title="地图事件回调(MapEventsPage)" address="/Samples/MapDemo/MapEventsPage.xaml" />
+  </node>
+  <node title="辅助功能接口" childTitle="有关地图的辅助信息">
+    <node title="距离与面积(MapCalculatePage)" address="/Samples/MapDemo/MapCalculatePage.xaml" />
+    <!--<node title="面积计算" address="/Samples/MapDemo/MapCalculatePage.xaml" />-->
+    <node title="截图(Screen)" address="/Samples/MapDemo/Screen.xaml" />
+    <node title="地图基本属性(DisplayMap)" address="/Samples/MapDemo/DisplayMap.xaml" />
+   <node title="地图建筑物(ShowBuilding)" address="/Samples/MapDemo/ShowBuilding.xaml" />
+  </node>
+  <node title="定位" childTitle="位置服务">
+    <node title="定位使用(MyLocation)" address="/Samples/MapDemo/MyLocation.xaml" />
+  </node>
+</root>

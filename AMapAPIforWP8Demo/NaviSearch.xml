@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<root>
+  <node title="地址解析" childTitle="地址解析">
+    <node title="地理编码(SearchGeoCode)" address="/Samples/SearchDemo/SearchGeoCode.xaml" />
+    <node title="逆地理编码(SearchReGeoCode)" address="/Samples/SearchDemo/SearchReGeoCode.xaml" />
+  </node>
+<node title="POI查询" childTitle="POI信息查询">
+    <node title="ID查询(POIIDSearch)" address="/Samples/SearchDemo/POIIDSearch.xaml" />
+    <node title="关键字查询(POIkeywordSearch)" address="/Samples/SearchDemo/POIkeywordSearch.xaml" />
+ <node title="周边查询(POIAround)" address="/Samples/SearchDemo/POIAround.xaml" />
+   <node title="多边形查询(POIPolygonSearch)" address="/Samples/SearchDemo/POIPolygonSearch.xaml" />
+  </node>
+<node title="公交" childTitle="公交信息查询" >
+      <node title="ID查询(BusLineIDSearch)" address="/Samples/SearchDemo/BusLineIDSearch.xaml" />
+    <node title="公交站查询(BusStopKeyWords)" address="/Samples/SearchDemo/BusStopKeyWords.xaml" />
+    <node title="公交路线查询(BusSearchofLine)" address="/Samples/SearchDemo/BusSearchofLine.xaml" />
+  </node>
+<node title="导航" childTitle="导航信息查询">
+    <node title="公交换乘导航(BusIntegratedNavigation)" address="/Samples/SearchDemo/BusIntegratedNavigation.xaml" />
+    <node title="驾车导航(CarDrivingNavigation)" address="/Samples/SearchDemo/CarDrivingNavigation.xaml" />
+ <node title="步行导航(WalkingNavigation)" address="/Samples/SearchDemo/WalkingNavigation.xaml" />
+  </node>
+<node title="其他" childTitle="other">
+    <node title="输入提示(AMapInputWordTips)" address="/Samples/SearchDemo/AMapInputWordTips.xaml" />
+    
+  </node>
+</root>
