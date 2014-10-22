@@ -38,7 +38,7 @@ namespace AMapAPIforWP8Demo
 
 
             //请输入官网申请的key
-            //string key = "";
+            string key = "";
 
             AMapConfig.Key = key;//地图显示key
             AMapSearchConfig.Key = key;
