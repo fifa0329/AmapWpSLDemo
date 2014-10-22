@@ -37,7 +37,8 @@ namespace AMapAPIforWP8Demo
             InitializeLanguage();
 
 
-            string key = "02180b3db397f71575f5fb3adca4ef35";
+            //请输入官网申请的key
+            //string key = "";
 
             AMapConfig.Key = key;//地图显示key
             AMapSearchConfig.Key = key;
