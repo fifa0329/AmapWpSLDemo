@@ -1,7 +1,7 @@
 AmapWpSLDemo     
 这个项目是高德地图SDK for windows phone 8 Silverlight的测试demo    
 下载地址为：
-http://lbs.amap.com/api/windows-phone-sdk/download/
+http://lbs.amap.com/api/windows-phone-sdk/download/  
 放到github上来的原因是：    
 
 1.首先作为一个测试的demo，开源是可行的。  
