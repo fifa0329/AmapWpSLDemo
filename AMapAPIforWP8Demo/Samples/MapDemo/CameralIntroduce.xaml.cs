@@ -37,6 +37,7 @@ namespace AMap_WP8_Api_Demos_v2._2.Samples
 
         private void amap_CameraChangeListener(object sender, AMapEventArgs e)
         {
+            //todo 应该直接给开发者返回main thread
             Dispatcher.BeginInvoke(() =>
             {
                 //显示信息
