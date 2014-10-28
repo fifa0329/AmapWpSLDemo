@@ -54,7 +54,7 @@ namespace AMap_WP8_Api_Demos_v2._2.Samples
         void mylocation_PositionChanged(AMapGeolocator sender, AMapPositionChangedEventArgs args)
         {
             location = args.LngLat;
-
+            //todo 是否应该给用户直接转向UI线程??类似amap_CameraChangeListener
             this.Dispatcher.BeginInvoke(() =>
             {
                 //GeoSearch(args.LngLat);
@@ -89,6 +89,7 @@ namespace AMap_WP8_Api_Demos_v2._2.Samples
                     //点标注和圆的位置在当前经纬度
                     marker.Position = args.LngLat;
                     circle.Center = args.LngLat;
+
                     circle.Radius = (float)args.Accuracy;//圆半径
                 }
 
