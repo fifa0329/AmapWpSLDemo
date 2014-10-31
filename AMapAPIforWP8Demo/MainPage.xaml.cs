@@ -3,23 +3,23 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Navigation;
-using Microsoft.Phone.Controls;
 using System.Xml.Linq;
+using Microsoft.Phone.Controls;
+using GestureEventArgs = System.Windows.Input.GestureEventArgs;
 
 namespace AMapAPIforWP8Demo
 {
     public partial class MainPage : PhoneApplicationPage
     {
-
         // 构造函数
         public MainPage()
         {
             InitializeComponent();
 
-            this.Loaded += MainPage_Loaded;
+            Loaded += MainPage_Loaded;
         }
-        void MainPage_Loaded(object sender, RoutedEventArgs e)
+
+        private void MainPage_Loaded(object sender, RoutedEventArgs e)
         {
             if (listBox.ItemsSource != null)
                 return;
@@ -30,16 +30,15 @@ namespace AMapAPIforWP8Demo
 
             XElement root = XElement.Load("NaviMap.xml");
 
-            var mapItem = LoadData(root);
-            listBoxMap.ItemsSource = mapItem;
+            List<NavigationModel> mapItems = LoadData(root);
+            listBoxMap.ItemsSource = mapItems;
             listBoxMap.UpdateLayout();
 
 
             root = XElement.Load("NaviSearch.xml");
-            var items = LoadData(root);
-            listBox.ItemsSource = items;
+            List<NavigationModel> searchItems = LoadData(root);
+            listBox.ItemsSource = searchItems;
             listBox.UpdateLayout();
-
         }
 
         private List<NavigationModel> LoadData(XElement root)
@@ -47,34 +46,31 @@ namespace AMapAPIforWP8Demo
             if (root == null)
                 return null;
 
-            var items = from n in root.Elements("node")
-                        select new NavigationModel
-                        {
-                            Title = (string)n.Attribute("title"),
-                            ChildTitle = n.Attribute("childTitle") == null ? null : (string)n.Attribute("childTitle"),
-                            Address = n.Attribute("address") == null ? null : new Uri((string)n.Attribute("address"), UriKind.Relative),
-                            Children = LoadData(n)
-                        };
+            IEnumerable<NavigationModel> items = from n in root.Elements("node")
+                select new NavigationModel
+                {
+                    Title = (string) n.Attribute("title"),
+                    ChildTitle = n.Attribute("childTitle") == null ? null : (string) n.Attribute("childTitle"),
+                    Address =
+                        n.Attribute("address") == null
+                            ? null
+                            : new Uri((string) n.Attribute("address"), UriKind.Relative),
+                    Children = LoadData(n)
+                };
 
             return items.ToList();
         }
 
-        private void Grid_Tap(object sender, System.Windows.Input.GestureEventArgs e)
+        private void GridSearch_Tap(object sender, GestureEventArgs e)
         {
             NavigationService.Navigate(new Uri((sender as Grid).Tag.ToString(), UriKind.Relative));
         }
 
 
-        protected override void OnNavigatedTo(NavigationEventArgs e)
-        {
-            base.OnNavigatedTo(e);
-        }
-
-        private void GridMap_Tap(object sender, System.Windows.Input.GestureEventArgs e)
+        private void GridMap_Tap(object sender, GestureEventArgs e)
         {
             NavigationService.Navigate(new Uri((sender as Grid).Tag.ToString(), UriKind.Relative));
         }
-
     }
 
     public class NavigationModel

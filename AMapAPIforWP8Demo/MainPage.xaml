@@ -135,7 +135,7 @@
                                     <toolkit:ExpanderView.ItemTemplate>
                                         <DataTemplate>
                                             <ListBoxItem toolkit:TiltEffect.IsTiltEnabled="True">
-                                                <Grid Tap="Grid_Tap" Tag="{Binding Address}" Margin="0,3,0,3">
+                                                <Grid Tap="GridSearch_Tap" Tag="{Binding Address}" Margin="0,3,0,3">
                                                     <TextBlock Text="{Binding Title}" TextWrapping="NoWrap"
                                                    Foreground="{StaticResource PhoneForegroundBrush}"
                                                    FontSize="30" 
