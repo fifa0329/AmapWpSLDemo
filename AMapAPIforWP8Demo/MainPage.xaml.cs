@@ -21,29 +21,25 @@ namespace AMapAPIforWP8Demo
         }
         void MainPage_Loaded(object sender, RoutedEventArgs e)
         {
-            this.Dispatcher.BeginInvoke(() =>
+            if (listBox.ItemsSource != null)
+                return;
+            if (listBoxMap.ItemsSource != null)
             {
-                if (listBox.ItemsSource != null)
-                    return;
-                if (listBoxMap.ItemsSource != null)
-                {
-                    return;
-                }
+                return;
+            }
 
-                XElement root = XElement.Load("NaviMap.xml");
+            XElement root = XElement.Load("NaviMap.xml");
 
-                var mapItem = LoadData(root);
-                listBoxMap.ItemsSource = mapItem;
-                listBoxMap.UpdateLayout();
+            var mapItem = LoadData(root);
+            listBoxMap.ItemsSource = mapItem;
+            listBoxMap.UpdateLayout();
 
 
-                root = XElement.Load("NaviSearch.xml");
-                var items = LoadData(root);
-                listBox.ItemsSource = items;
-                listBox.UpdateLayout();
+            root = XElement.Load("NaviSearch.xml");
+            var items = LoadData(root);
+            listBox.ItemsSource = items;
+            listBox.UpdateLayout();
 
-
-            });
         }
 
         private List<NavigationModel> LoadData(XElement root)
